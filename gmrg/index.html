@@ -1,0 +1,362 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="http://stat.ubc.ca/_ubc_clf/img/favicon.ico">
+
+    <title>Graphical Models Reading Group | UBC Statistics</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/grid.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div class="page-header">
+        <h1>Graphical Models Reading Group</h1>
+        <p class="lead">UBC Statistics, 2015 Summer</p>
+      </div>
+	  <h2>Notice</h2>
+	  <ul>
+	    <li>There's no meeting on June 26, 2015.</li>
+	    <li>Updated <a href="files/f90gaussfactor.R">f90gaussfactor.R</a> and <a href="files/load2pcor.R">load2pcor.R</a> in CopulaModel package, which fix the problem that factanal.co does not work for the 1-factor model.</li>
+	    <li>Updated <a href="files/gausstrvineMST.R">gausstrvineMST.R</a> in CopulaModel package, which uses igraph package rather than igraph0.</li>
+	  </ul>
+	  <h2>Introduction</h2>
+	  <br>The Graphical Models Reading Group meets weekly to talk about recent research in graphcial models. We meet every <strong>Friday, 1:30pm to 2:30pm in ESB 3125</strong>.</p>
+
+
+
+
+      <h2>Schedule</h2>
+
+	  <div>
+	      <table class="table table-hover">
+	        <thead>
+	          <tr>
+	            <th>#</th>
+	            <th>Date</th>
+	            <th>Presenter</th>
+	            <th>Topic</th>
+	          </tr>
+	        </thead>
+	        <tbody>
+	          <tr>
+	            <th scope="row">1</th>
+	            <td>May 8, 2015</td>
+	            <td>Prof. Harry Joe</td>
+	            <td>Conditional independence copula models with graphical representations. [<a href="files/Joe_05082015.pdf">Slides</a>]</td>
+	          </tr>
+	          <tr>
+	            <th scope="row">2</th>
+	            <td>May 15, 2015</td>
+	            <td>Bo Chang</td>
+	            <td>An introduction to graphical lasso. [<a href="files/Bo_05152015.pdf">Slides</a>]
+					<br><em>The dataset can be found <a href="http://web.stanford.edu/group/wonglab/JASAFlowCytometryData/JASA%20Flow%20Cytometry%20Data.htm">here</a>.</em></td>
+	          </tr>
+	          <tr>
+	            <th scope="row">3</th>
+	            <td>May 22, 2015</td>
+	            <td>Bo Chang</td>
+	            <td>Covariance estimation with Cholesky decomposition and generalized linear model. [<a href="files/Bo_05222015.pdf">Slides</a>]</td>
+	          </tr>
+	          <tr>
+	            <th scope="row">4</th>
+	            <td>May 29, 2015</td>
+	            <td>Bo Chang</td>
+	            <td>Regularization of covariance matrix. [<a href="files/Bo_05292015.pdf">Slides</a>]</td>
+	          </tr>
+	          <tr>
+	            <th scope="row">5</th>
+	            <td>June 5, 2015</td>
+	            <td>Evan Durno</td>
+	            <td>Biological network inference as multivariate count regression. [<a href="files/Evan_06052015.pdf">Slides</a>]</td>
+	          </tr>
+	          <tr>
+	            <th scope="row">6</th>
+	            <td>June 12, 2015</td>
+	            <td>Evan Durno</td>
+	            <td>Examples of network usage in Bioinformatics. [<a href="files/Evan_06122015.pdf">Slides</a>]</td>
+	          </tr>
+	          <tr>
+	            <th scope="row">7</th>
+	            <td>June 19, 2015</td>
+	            <td>Seong-Hwan Jun</td>
+	            <td>Structure estimation for discrete graphical models. [<a href="files/Seong_06192015.pdf">Slides</a>]</td>
+	          </tr>
+	          <tr>
+	            <th scope="row">8</th>
+	            <td>July 3, 2015</td>
+	            <td>Bo Chang</td>
+	            <td>Discovering sparse covariance structures with the Isomap. [<a href="files/Bo_07032015.pdf">Slides</a>]
+				<br><em>The dataset can be found <a href="http://lib.stat.cmu.edu/DASL/Datafiles/Protein.html">here</a>.</em></td>
+	          </tr>
+	          <tr>
+	            <th scope="row">9</th>
+	            <td>July 10, 2015</td>
+	            <td>Evan Durno</td>
+	            <td>Summary of factor model analysis by Fan et al. [<a href="files/Evan_07102015.pdf">Slides</a>]</td>
+	          </tr>
+	          <tr>
+	            <th scope="row">10</th>
+	            <td>July 17, 2015</td>
+	            <td>Alex Kosgodagan <br>Wiebke Jäger</td>
+	            <td>Dependence modelling and quantification methods. [<a href="files/Alex_07172015.pdf">Slides</a>]
+					<br>Modeling Ocean Waves - A Dependence Tree Approach. [<a href="files/Wiebke_07172015.pdf">Slides</a>]</td>
+	          </tr>
+	          <tr>
+	            <th scope="row">11</th>
+	            <td>July 24, 2015</td>
+	            <td>Prof. Harry Joe</td>
+	            <td>Examples of vines and vine copulas (part one). [<a href="files/Joe_07242015.pdf">Slides</a>]</td>
+	          </tr>
+	          <tr>
+	            <th scope="row">12</th>
+	            <td>July 31, 2015</td>
+	            <td>Prof. Harry Joe</td>
+	            <td>Examples of vines and vine copulas (part two). [<a href="files/Joe_07312015.pdf">Slides</a>]</td>
+	          </tr>
+            <tr>
+              <th scope="row">13</th>
+              <td>August 7, 2015</td>
+              <td>David Lee</td>
+              <td>Graphical representation of multivariate dependencies. [<a href="files/David_08072015.pdf">Slides</a>]</td>
+            </tr>
+            <tr>
+              <th scope="row">14</th>
+              <td>August 14, 2015</td>
+              <td>David Lee <br>Prof. Harry Joe</td>
+              <td>Sparse maximum likelihood estimation for Gaussian and binary data. [<a href="files/David_08142015.pdf">Slides</a>]
+              <br>Linear dependence represented by chain graphs. [<a href="files/Joe_08142015_1.pdf">Slides</a>]
+              <br>Ising model for multivariate binary response. [<a href="files/Joe_08142015_2.pdf">Slides</a>]
+              </td>
+            </tr>
+	        </tbody>
+	      </table>
+	    </div>
+
+
+
+  	  <h2>Participants</h2>
+
+  	  <div>
+  	      <table class="table table-hover">
+  	        <thead>
+  	          <tr>
+  	            <th>Name</th>
+  	            <th>Email</th>
+  	          </tr>
+  	        </thead>
+  	        <tbody>
+  	          <tr>
+  	            <td>Prof. Harry Joe</td>
+  	            <td>harry@stat.ubc.ca</td>
+  	          </tr>
+  	          <tr>
+  	            <td>Prof. Ruben Zamar</td>
+  	            <td>ruben@stat.ubc.ca</td>
+  	          </tr>
+  	          <tr>
+  	            <td>Bo Chang</td>
+  	            <td>bchang@stat.ubc.ca</td>
+  	          </tr>
+  	          <tr>
+  	            <td>David Lee</td>
+  	            <td>david.lee@stat.ubc.ca</td>
+  	          </tr>
+  	          <tr>
+  	            <td>Seong-Hwan Jun</td>
+  	            <td>seong.jun@stat.ubc.ca</td>
+  	          </tr>
+  	          <tr>
+  	            <td>Evan Durno</td>
+  	            <td>wdurno@gmail.com</td>
+  	          </tr>
+  	        </tbody>
+  	      </table>
+  	    </div>
+
+      <h2>Reading List</h2>
+<ol>
+<h3>Covariance matrix</h3>
+<li>Jie Peng, Pei Wang, Nengfeng Zhou & Ji Zhu (2009).
+Partial Correlation Estimation by Joint Sparse Regression Models.
+Journal of the American Statistical Association, 104:486, 735-746.</li>
+
+<li>David I Warton (2008).
+Penalized Normal Likelihood and Ridge Regularization of Correlation and
+Covariance Matrices.
+Journal of the American Statistical Association, 103:481, 340-349.</li>
+
+<li>A. S. Wagaman and E. Levina (2009).
+Discovering Sparse Covariance Structures With the Isomap.
+Journal of Computational and Graphical Statistics, 18:3, 551-572.</li>
+
+<li>Olivier Ledoit, and Michael Wolf.
+A well-conditioned estimator for large-dimensional covariance matrices.
+Journal of Multivariate Analysis 88 (2004) 365-411.</li>
+
+<li>Michael J. Daniels, Robert E. Kass.
+Shrinkage Estimators for Covariance Matrices.
+Biometrics 57, 1173-1184 December 2001.</li>
+
+<li>Changgee Chang, Ruey S. Tsay.
+Estimation of covariance matrix via the sparse Cholesky factor with lasso.
+Journal of Statistical Planning and Inference 140 (2010) 3858-3873.</li>
+
+<li>Mohsen Pourahmadi.
+Covariance Estimation: The GLM and Regularization Perspectives.
+Statistical Science, 2011, Vol. 26, No. 3, 369-387.</li>
+
+<li>Adam J. Rothman.
+Positive definite estimators of large covariance matrices.
+Biometrika (2012), 99, 3, pp. 733-740.</li>
+
+<li>Eric C. Chi, Kenneth Lange.
+Stable estimation of a covariance matrix guided by nuclear norm penalties.
+Computational Statistics and Data Analysis 80 (2014) 117-128.</li>
+
+<li>Brechmann and Joe.
+Parsimonious parameterization of correlation matrices using
+truncated vines and factor analysis.
+Computational Statistics and Data Analysis 77 (2014) 233-251.</li>
+
+
+
+<h3>Precision matrix</h3>
+
+<li>Friedman, Hastie, Tibshirani.
+Sparse inverse covariance estimation with the graphical lasso.
+Biostatistics (2008), 9, 3, pp. 432-441.</li>
+
+<li>Weidong Liu, Xi Luo.
+Fast and adaptive sparse precision matrix estimation in high dimensions.
+Journal of Multivariate Analysis 135 (2015) 153-162.</li>
+
+<li>Po-Ling Loh and Martin J. Wainwright.
+Structure estimation for discrete graphical models: generalized covariance
+matrices and their inverses.
+The Annals of Statistics 2013, Vol. 41, No. 6, 3022-3049.</li>
+
+
+<h3>Machine learning</h3>
+
+<li>Banerjee, El Ghaoui, d'Aspremont.
+Model Selection Through Sparse Maximum Likelihood Estimation
+for Multivariate Gaussian or Binary Data.
+Journal of Machine Learning Research 9 (2008) 485-516.</li>
+
+<li>Yi-Hao Kao , Benjamin Van Roy.
+Learning a factor model via regularized PCA.
+Mach Learn (2013) 91:279-303.</li>
+
+<li>Kolar, Liu, Xing.
+Graph Estimation From Multi-Attribute Data.
+Journal of Machine Learning Research 15 (2014) 1713-1750.</li>
+
+
+
+<h3>Bioinformatics / Genetics</h3>
+
+<li>Yiming Zuo, Guoqiang Yu, Mahlet G. Tadesse, Habtom W. Ressom.
+Biological network inference using low order partial correlation.
+Methods 69 (2014) 266-273.</li>
+
+<li>Elias Chaibub Neto , Mark P. Keller , Alan D. Attie and Brian S. Yandell.
+Causal graphical models in systems genetics: a unified framework for joint
+inference of causal network and genetic architecture for correlated
+phenotypes.
+The Annals of Applied Statistics 2010, Vol. 4, No. 1, 320-339.</li>
+
+<li>Schaefer, Strimmer.
+An empirical Bayes approach to inferring large-scale gene association
+networks.
+Bioinformatics Vol. 21 no. 6 2005, pages 754-764.</li>
+
+<li>Schaefer, Strimmer.
+A Shrinkage Approach to Large-Scale Covariance Matrix Estimation and
+Implications for Functional Genomics.
+Statistical Applications in Genetics and Molecular Biology.
+Volume 4, Issue 1 2005 Article 32.</li>
+
+
+
+<h3>Finance, econometrics</h3>
+
+<li>Jianqing Fan , Yingying Fan, Jinchi Lv.
+High dimensional covariance matrix estimation using a factor model.
+Journal of Econometrics 147 (2008) 186-197.</li>
+
+<li>Jianqing Fan , Yuan Liao and Martina Mincheva.
+High-dimensional covariance matrix estimation in approximate factor models.
+The Annals of Statistics 2011, Vol. 39, No. 6, 3320-3356.</li>
+
+<li>Olivier Ledoit, Michael Wolf.
+Improved estimation of the covariance matrix of stock returns with an
+application to portfolio selection.
+Journal of Empirical Finance 10 (2003) 603-621.</li>
+
+<li>Nicholas J. Higham.
+Computing the nearest correlation matrix -- a problem from finance.
+IMA Journal of Numerical Analysis (2002) 22, 329-343.</li>
+
+
+
+<h3>Longitudinal</h3>
+
+<li>Wei Biao Wu, Mohsen Pourahmadi.
+Nonparametric estimation of large covariance matrices of longitudinal data.
+Biometrika (2003), 90, 4, pp. 831-844.</li>
+
+<li>Y. Wang, M.J. Daniels.
+Computationally efficient banding of large covariance matrices for
+ordered data and connections to banding the inverse Cholesky factor.
+Journal of Multivariate Analysis 130 (2014) 21-26.</li>
+
+<li>Chulmin Kim, Dale L. Zimmerman.
+Unconstrained models for the covariance structure of multivariate
+longitudinal data.
+Journal of Multivariate Analysis 107 (2012) 104-118.</li>
+
+
+<h3>Others</h3>
+
+<li>Kurowicka.
+Joint density of correlations in the correlation matrix with chordal
+sparsity patterns.
+Journal of Multivariate Analysis 129 (2014) 160-170.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  </body>
+</html>
