@@ -1,6 +1,0 @@
-    "Description": "Bo Chang is a software engineer at Google Brain.",
-    "jobTitle": "Software Engineer",
-    "worksFor": [{
-      "@type": "Organization",
-      "name": "Google",
-    }],
